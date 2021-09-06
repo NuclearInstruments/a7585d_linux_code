@@ -7,6 +7,19 @@ The module is designed by [Nuclear Instruments SRL](https://www.nuckearinstrumen
 
 ![Image of A7585D connected to the Raspberry PI](https://github.com/NuclearInstruments/a7585d_linux_code/blob/main/docs/a7585d_rpi.jpg)
 
+## Connect the A7585D to the Raspberry PI
+
+The A7585D/DU will communicate with the Raspberry PI using the I2C bus.
+The A7585D/DU require a bias voltage for the I2C to be identical to the I2C bus voltage of the Raspberry PI
+We use the raspberry 3.3V output to I2C VDD to the module has internal pullup on the SCL/SDA Lines
+
+
+![Connection of hte A7585D to the Raspberry PI](https://github.com/NuclearInstruments/a7585d_linux_code/blob/main/docs/a7585d_raspberrypi.png)
+
+![Connection of hte A7585DU to the Raspberry PI](https://github.com/NuclearInstruments/a7585d_linux_code/blob/main/docs/a7585du_raspberrypi.png)
+
+
+## Compile ad use the code
 In terminal linux embedded device (IE raspberry pi) enter:
 ```
 g++ HV_manager.c main.c -o a7585
